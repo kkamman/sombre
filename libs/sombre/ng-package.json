@@ -3,5 +3,6 @@
   "dest": "../../dist/libs/sombre",
   "lib": {
     "entryFile": "src/index.ts"
-  }
+  },
+  "deleteDestPath": false
 }

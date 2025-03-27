@@ -15,7 +15,7 @@
   },
   "tags": [],
   "targets": {
-    "build": {
+    "build-angular": {
       "executor": "@nx/angular:package",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
       "options": {
@@ -27,6 +27,46 @@
         },
         "development": {
           "tsConfig": "libs/sombre/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "build-lib": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "configurations": {
+        "production": {
+          "commands": [
+            "npx nx run sombre:build-angular:production",
+            "npx @tailwindcss/cli -i ./{projectRoot}/src/styles/theme.css -o ./dist/{projectRoot}/themes/theme.css -m"
+          ]
+        },
+        "development": {
+          "commands": [
+            "npx nx run sombre:build-angular:development",
+            "npx @tailwindcss/cli -i ./{projectRoot}/src/styles/theme.css -o ./dist/{projectRoot}/themes/theme.css"
+          ]
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "configurations": {
+        "production": {
+          "commands": [
+            "npx rimraf dist/{projectRoot}",
+            "npx nx run sombre:build-lib:production"
+          ],
+          "parallel": false
+        },
+        "development": {
+          "commands": [
+            "npx rimraf dist/{projectRoot}",
+            "npx nx run sombre:build-lib:development"
+          ],
+          "parallel": false
         }
       },
       "defaultConfiguration": "production"
