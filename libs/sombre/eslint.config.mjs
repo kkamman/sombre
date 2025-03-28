@@ -37,6 +37,11 @@ export default [
           prefix: 'smbr',
           style: 'kebab-case',
         },
+        {
+          type: 'attribute',
+          prefix: 'smbr',
+          style: 'camelCase',
+        },
       ],
     },
   },

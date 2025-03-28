@@ -1,6 +1,2 @@
 @import '../../../libs/sombre/src/styles/theme.css';
 @import 'tailwindcss';
-
-@theme static {
-  --color-primary-500: orange;
-}

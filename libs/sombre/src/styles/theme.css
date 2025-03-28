@@ -1,5 +1,4 @@
-@import 'tailwindcss';
-
-@theme {
-  --color-primary-500: green;
-}
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(smbr);
+@import './scoped-preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(smbr);

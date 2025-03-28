@@ -1,0 +1,486 @@
+/* Original source: https://github.com/tailwindlabs/tailwindcss/blob/main/packages/tailwindcss/preflight.css */
+/* Changed to be scoped to .smbr:preflight */
+
+/*
+  1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+  2. Remove default margins and padding
+  3. Reset all borders.
+*/
+
+:where(.smbr\:preflight) *,
+:where(.smbr\:preflight) ::after,
+:where(.smbr\:preflight) ::before,
+:where(.smbr\:preflight) ::backdrop,
+:where(.smbr\:preflight) ::file-selector-button,
+:where(.smbr\:preflight)::after,
+:where(.smbr\:preflight)::before,
+:where(.smbr\:preflight)::backdrop,
+:where(.smbr\:preflight)::file-selector-button {
+  box-sizing: border-box; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 2 */
+  border: 0 solid; /* 3 */
+}
+
+/*
+  1. Use a consistent sensible line-height in all browsers.
+  2. Prevent adjustments of font size after orientation changes in iOS.
+  3. Use a more readable tab size.
+  4. Use the user's configured `sans` font-family by default.
+  5. Use the user's configured `sans` font-feature-settings by default.
+  6. Use the user's configured `sans` font-variation-settings by default.
+  7. Disable tap highlights on iOS.
+*/
+
+html :where(.smbr\:preflight),
+:host :where(.smbr\:preflight),
+html:where(.smbr\:preflight),
+:host:where(.smbr\:preflight) {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  tab-size: 4; /* 3 */
+  font-family: --theme(
+    --default-font-family,
+    ui-sans-serif,
+    system-ui,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'Noto Color Emoji'
+  ); /* 4 */
+  font-feature-settings: --theme(
+    --default-font-feature-settings,
+    normal
+  ); /* 5 */
+  font-variation-settings: --theme(
+    --default-font-variation-settings,
+    normal
+  ); /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
+}
+
+/*
+  1. Add the correct height in Firefox.
+  2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+  3. Reset the default border style to a 1px solid border.
+*/
+
+:where(.smbr\:preflight) hr,
+hr:where(.smbr\:preflight) {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+
+/*
+  Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+:where(.smbr\:preflight) abbr:where([title]),
+abbr:where([title].smbr\:preflight) {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/*
+  Remove the default font size and weight for headings.
+*/
+
+:where(.smbr\:preflight) h1,
+:where(.smbr\:preflight) h2,
+:where(.smbr\:preflight) h3,
+:where(.smbr\:preflight) h4,
+:where(.smbr\:preflight) h5,
+:where(.smbr\:preflight) h6,
+h1:where(.smbr\:preflight),
+h2:where(.smbr\:preflight),
+h3:where(.smbr\:preflight),
+h4:where(.smbr\:preflight),
+h5:where(.smbr\:preflight),
+h6:where(.smbr\:preflight) {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+  Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+:where(.smbr\:preflight) a,
+a:where(.smbr\:preflight) {
+  color: inherit;
+  -webkit-text-decoration: inherit;
+  text-decoration: inherit;
+}
+
+/*
+  Add the correct font weight in Edge and Safari.
+*/
+
+:where(.smbr\:preflight) b,
+:where(.smbr\:preflight) strong,
+b:where(.smbr\:preflight),
+strong:where(.smbr\:preflight) {
+  font-weight: bolder;
+}
+
+/*
+  1. Use the user's configured `mono` font-family by default.
+  2. Use the user's configured `mono` font-feature-settings by default.
+  3. Use the user's configured `mono` font-variation-settings by default.
+  4. Correct the odd `em` font sizing in all browsers.
+*/
+
+:where(.smbr\:preflight) code,
+:where(.smbr\:preflight) kbd,
+:where(.smbr\:preflight) samp,
+:where(.smbr\:preflight) pre,
+code:where(.smbr\:preflight),
+kbd:where(.smbr\:preflight),
+samp:where(.smbr\:preflight),
+pre:where(.smbr\:preflight) {
+  font-family: --theme(
+    --default-mono-font-family,
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Liberation Mono',
+    'Courier New',
+    monospace
+  ); /* 1 */
+  font-feature-settings: --theme(
+    --default-mono-font-feature-settings,
+    normal
+  ); /* 2 */
+  font-variation-settings: --theme(
+    --default-mono-font-variation-settings,
+    normal
+  ); /* 3 */
+  font-size: 1em; /* 4 */
+}
+
+/*
+  Add the correct font size in all browsers.
+*/
+
+:where(.smbr\:preflight) small,
+small:where(.smbr\:preflight) {
+  font-size: 80%;
+}
+
+/*
+  Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+:where(.smbr\:preflight) sub,
+:where(.smbr\:preflight) sup,
+sub:where(.smbr\:preflight),
+sup:where(.smbr\:preflight) {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+:where(.smbr\:preflight) sub,
+sub:where(.smbr\:preflight) {
+  bottom: -0.25em;
+}
+
+:where(.smbr\:preflight) sup,
+sup:where(.smbr\:preflight) {
+  top: -0.5em;
+}
+
+/*
+  1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+  2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+  3. Remove gaps between table borders by default.
+*/
+
+:where(.smbr\:preflight) table,
+table:where(.smbr\:preflight) {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+
+/*
+  Use the modern Firefox focus style for all focusable elements.
+*/
+
+:where(.smbr\:preflight) :-moz-focusring,
+:-moz-focusring:where(.smbr\:preflight) {
+  outline: auto;
+}
+
+/*
+  Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+:where(.smbr\:preflight) progress,
+progress:where(.smbr\:preflight) {
+  vertical-align: baseline;
+}
+
+/*
+  Add the correct display in Chrome and Safari.
+*/
+
+:where(.smbr\:preflight) summary,
+summary:where(.smbr\:preflight) {
+  display: list-item;
+}
+
+/*
+  Make lists unstyled by default.
+*/
+
+:where(.smbr\:preflight) ol,
+:where(.smbr\:preflight) ul,
+:where(.smbr\:preflight) menu,
+ol:where(.smbr\:preflight),
+ul:where(.smbr\:preflight),
+menu:where(.smbr\:preflight) {
+  list-style: none;
+}
+
+/*
+  1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+  2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+      This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+:where(.smbr\:preflight) img,
+:where(.smbr\:preflight) svg,
+:where(.smbr\:preflight) video,
+:where(.smbr\:preflight) canvas,
+:where(.smbr\:preflight) audio,
+:where(.smbr\:preflight) iframe,
+:where(.smbr\:preflight) embed,
+:where(.smbr\:preflight) object,
+img:where(.smbr\:preflight),
+svg:where(.smbr\:preflight),
+video:where(.smbr\:preflight),
+canvas:where(.smbr\:preflight),
+audio:where(.smbr\:preflight),
+iframe:where(.smbr\:preflight),
+embed:where(.smbr\:preflight),
+object:where(.smbr\:preflight) {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+
+/*
+  Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+:where(.smbr\:preflight) img,
+:where(.smbr\:preflight) video,
+img:where(.smbr\:preflight),
+video:where(.smbr\:preflight) {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+  1. Inherit font styles in all browsers.
+  2. Remove border radius in all browsers.
+  3. Remove background color in all browsers.
+  4. Ensure consistent opacity for disabled states in all browsers.
+*/
+
+:where(.smbr\:preflight) button,
+:where(.smbr\:preflight) input,
+:where(.smbr\:preflight) select,
+:where(.smbr\:preflight) optgroup,
+:where(.smbr\:preflight) textarea,
+:where(.smbr\:preflight) ::file-selector-button,
+button:where(.smbr\:preflight),
+input:where(.smbr\:preflight),
+select:where(.smbr\:preflight),
+optgroup:where(.smbr\:preflight),
+textarea:where(.smbr\:preflight),
+::file-selector-button:where(.smbr\:preflight) {
+  font: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
+  letter-spacing: inherit; /* 1 */
+  color: inherit; /* 1 */
+  border-radius: 0; /* 2 */
+  background-color: transparent; /* 3 */
+  opacity: 1; /* 4 */
+}
+
+/*
+  Restore default font weight.
+*/
+
+:where(.smbr\:preflight select:is([multiple], [size])) optgroup,
+:where(select:is([multiple], [size])) optgroup:where(.smbr\:preflight) {
+  font-weight: bolder;
+}
+
+/*
+  Restore indentation.
+*/
+
+:where(.smbr\:preflight select:is([multiple], [size])) optgroup option,
+:where(select:is([multiple], [size])) optgroup option:where(.smbr\:preflight) {
+  padding-inline-start: 20px;
+}
+
+/*
+  Restore space after button.
+*/
+
+:where(.smbr\:preflight) ::file-selector-button,
+::file-selector-button:where(.smbr\:preflight) {
+  margin-inline-end: 4px;
+}
+
+/*
+  Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+*/
+
+:where(.smbr\:preflight) ::placeholder,
+::placeholder:where(.smbr\:preflight) {
+  opacity: 1;
+}
+
+/*
+  Set the default placeholder color to a semi-transparent version of the current text color in browsers that do not
+  crash when using `color-mix(…)` with `currentColor`. (https://github.com/tailwindlabs/tailwindcss/issues/17194)
+*/
+
+@supports (not (-webkit-appearance: -apple-pay-button)) /* Not Safari */ or
+  (contain-intrinsic-size: 1px) /* Safari 17+ */ {
+  :where(.smbr\:preflight) ::placeholder,
+  ::placeholder:where(.smbr\:preflight) {
+    color: color-mix(in oklab, currentColor 50%, transparent);
+  }
+}
+
+/*
+  Prevent resizing textareas horizontally by default.
+*/
+
+:where(.smbr\:preflight) textarea,
+textarea:where(.smbr\:preflight) {
+  resize: vertical;
+}
+
+/*
+  Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+:where(.smbr\:preflight) ::-webkit-search-decoration,
+::-webkit-search-decoration:where(.smbr\:preflight) {
+  -webkit-appearance: none;
+}
+
+/*
+  1. Ensure date/time inputs have the same height when empty in iOS Safari.
+  2. Ensure text alignment can be changed on date/time inputs in iOS Safari.
+*/
+
+:where(.smbr\:preflight) ::-webkit-date-and-time-value,
+::-webkit-date-and-time-value:where(.smbr\:preflight) {
+  min-height: 1lh; /* 1 */
+  text-align: inherit; /* 2 */
+}
+
+/*
+  Prevent height from changing on date/time inputs in macOS Safari when the input is set to `display: block`.
+*/
+
+:where(.smbr\:preflight) ::-webkit-datetime-edit,
+::-webkit-datetime-edit:where(.smbr\:preflight) {
+  display: inline-flex;
+}
+
+/*
+  Remove excess padding from pseudo-elements in date/time inputs to ensure consistent height across browsers.
+*/
+
+:where(.smbr\:preflight) ::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-fields-wrapper:where(.smbr\:preflight) {
+  padding: 0;
+}
+
+:where(.smbr\:preflight) ::-webkit-datetime-edit,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-year-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-month-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-day-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-hour-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-minute-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-second-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-millisecond-field,
+:where(.smbr\:preflight) ::-webkit-datetime-edit-meridiem-field,
+::-webkit-datetime-edit:where(.smbr\:preflight),
+::-webkit-datetime-edit-year-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-month-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-day-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-hour-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-minute-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-second-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-millisecond-field:where(.smbr\:preflight),
+::-webkit-datetime-edit-meridiem-field:where(.smbr\:preflight) {
+  padding-block: 0;
+}
+
+/*
+  Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:where(.smbr\:preflight) :-moz-ui-invalid,
+:-moz-ui-invalid:where(.smbr\:preflight) {
+  box-shadow: none;
+}
+
+/*
+  Correct the inability to style the border radius in iOS Safari.
+*/
+
+:where(.smbr\:preflight) button,
+:where(.smbr\:preflight)
+  input:where([type='button'], [type='reset'], [type='submit']),
+:where(.smbr\:preflight) ::file-selector-button,
+button:where(.smbr\:preflight),
+input:where([type='button'], [type='reset'], [type='submit']).smbr\:preflight,
+::file-selector-button:where(.smbr\:preflight) {
+  appearance: button;
+}
+
+/*
+  Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+:where(.smbr\:preflight) ::-webkit-inner-spin-button,
+:where(.smbr\:preflight) ::-webkit-outer-spin-button,
+::-webkit-inner-spin-button:where(.smbr\:preflight),
+::-webkit-outer-spin-button:where(.smbr\:preflight) {
+  height: auto;
+}
+
+/*
+  Make elements with the HTML hidden attribute stay hidden by default.
+*/
+
+:where(.smbr\:preflight) [hidden]:where(:not([hidden='until-found'])),
+[hidden]:where(.smbr\:preflight:not([hidden='until-found'])) {
+  display: none !important;
+}
+
+.smbr\:no-preflight {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    all: revert-layer;
+  }
+}

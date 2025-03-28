@@ -1,5 +1,0 @@
-@reference '../../styles/theme.css';
-
-.smbr-sombre {
-  @apply text-primary-500;
-}

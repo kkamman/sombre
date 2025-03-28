@@ -1,1 +1,1 @@
-export * from './lib/sombre/sombre.component';
+export * from './lib/button/button';
