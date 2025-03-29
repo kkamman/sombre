@@ -4,7 +4,7 @@ import {
   computed,
   input,
 } from '@angular/core';
-import { ClassValue, tv } from 'tailwind-variants';
+import { ClassValue } from 'tailwind-variants';
 import { ButtonVariants, buttonVariants } from './variants';
 
 const { base: baseVariant, label: labelVariant } = buttonVariants();
@@ -17,15 +17,21 @@ const { base: baseVariant, label: labelVariant } = buttonVariants();
   host: { '[class]': 'baseClass()' },
 })
 export class ButtonComponent {
-  readonly variant = input<ButtonVariants['variant']>('primary');
+  readonly color = input<ButtonVariants['color']>();
+
+  readonly variant = input<ButtonVariants['variant']>();
 
   readonly userClass = input<ClassValue>('', { alias: 'class' });
 
   protected readonly baseClass = computed(() =>
-    baseVariant({ variant: this.variant(), class: this.userClass() }),
+    baseVariant({
+      color: this.color(),
+      variant: this.variant(),
+      class: this.userClass(),
+    }),
   );
 
   protected readonly labelClass = computed(() =>
-    labelVariant({ variant: this.variant() }),
+    labelVariant({ color: this.color() }),
   );
 }

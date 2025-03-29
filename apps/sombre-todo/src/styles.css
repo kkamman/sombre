@@ -5,28 +5,3 @@
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/preflight.css' layer(base);
 @import 'tailwindcss/utilities.css' layer(utilities);
-
-:root {
-  --smbr-color-primary-50: var(--color-pink-50);
-  --smbr-color-primary-100: var(--color-pink-100);
-  --smbr-color-primary-200: var(--color-pink-200);
-  --smbr-color-primary-300: var(--color-pink-300);
-  --smbr-color-primary-400: var(--color-pink-400);
-  --smbr-color-primary-500: var(--color-pink-500);
-  --smbr-color-primary-600: var(--color-pink-600);
-  --smbr-color-primary-700: var(--color-pink-700);
-  --smbr-color-primary-800: var(--color-pink-800);
-  --smbr-color-primary-900: var(--color-pink-900);
-  --smbr-color-primary-950: var(--color-pink-950);
-  --smbr-color-secondary-50: var(--color-green-50);
-  --smbr-color-secondary-100: var(--color-green-100);
-  --smbr-color-secondary-200: var(--color-green-200);
-  --smbr-color-secondary-300: var(--color-green-300);
-  --smbr-color-secondary-400: var(--color-green-400);
-  --smbr-color-secondary-500: var(--color-green-500);
-  --smbr-color-secondary-600: var(--color-green-600);
-  --smbr-color-secondary-700: var(--color-green-700);
-  --smbr-color-secondary-800: var(--color-green-800);
-  --smbr-color-secondary-900: var(--color-green-900);
-  --smbr-color-secondary-950: var(--color-green-950);
-}

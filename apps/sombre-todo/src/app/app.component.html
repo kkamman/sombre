@@ -1,3 +1,33 @@
-<button smbrButton [variant]="'primary'">Primary Button</button>
-<button smbrButton [variant]="'secondary'">Secondary Button</button>
+<div class="flex gap-4 p-4">
+  <button smbrButton>Default</button>
+  <button smbrButton [color]="'primary'">Primary</button>
+  <button smbrButton [color]="'secondary'">Secondary</button>
+  <button smbrButton [variant]="'outline'">Default</button>
+  <button smbrButton [color]="'primary'" [variant]="'outline'">Primary</button>
+  <button smbrButton [color]="'secondary'" [variant]="'outline'">
+    Secondary
+  </button>
+  <button smbrButton [variant]="'text'">Default</button>
+  <button smbrButton [color]="'primary'" [variant]="'text'">Primary</button>
+  <button smbrButton [color]="'secondary'" [variant]="'text'">Secondary</button>
+</div>
+<div class="flex gap-4 p-4">
+  <button smbrButton disabled>Default</button>
+  <button smbrButton [color]="'primary'" disabled>Primary</button>
+  <button smbrButton [color]="'secondary'" disabled>Secondary</button>
+  <button smbrButton [variant]="'outline'" disabled>Default</button>
+  <button smbrButton [color]="'primary'" [variant]="'outline'" disabled>
+    Primary
+  </button>
+  <button smbrButton [color]="'secondary'" [variant]="'outline'" disabled>
+    Secondary
+  </button>
+  <button smbrButton [variant]="'text'" disabled>Default</button>
+  <button smbrButton [color]="'primary'" [variant]="'text'" disabled>
+    Primary
+  </button>
+  <button smbrButton [color]="'secondary'" [variant]="'text'" disabled>
+    Secondary
+  </button>
+</div>
 <router-outlet></router-outlet>
