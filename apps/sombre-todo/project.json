@@ -9,6 +9,12 @@
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
+      "dependsOn": [
+        {
+          "projects": ["sombre"],
+          "target": "build"
+        }
+      ],
       "options": {
         "outputPath": "dist/apps/sombre-todo",
         "index": "apps/sombre-todo/src/index.html",
@@ -56,6 +62,24 @@
         },
         "development": {
           "buildTarget": "sombre-todo:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "serve-watch-tailwind": {
+      "executor": "nx:run-commands",
+      "configurations": {
+        "production": {
+          "commands": [
+            "npx nx watch --projects=sombre -- nx run sombre:build-tailwind:production",
+            "npx nx run sombre-todo:serve:production"
+          ]
+        },
+        "development": {
+          "commands": [
+            "npx nx watch --projects=sombre -- nx run sombre:build-tailwind:development",
+            "npx nx run sombre-todo:serve:development"
+          ]
         }
       },
       "defaultConfiguration": "development"

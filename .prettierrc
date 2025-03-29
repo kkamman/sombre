@@ -1,5 +1,27 @@
 {
   "singleQuote": true,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["tv"]
+  "tailwindFunctions": ["tv"],
+  "overrides": [
+    {
+      "files": [
+        "libs/sombre/**/*.ts",
+        "libs/sombre/**/*.css",
+        "libs/sombre/**/*.html"
+      ],
+      "options": {
+        "tailwindStylesheet": "libs/sombre/src/styles/theme.css"
+      }
+    },
+    {
+      "files": [
+        "apps/sombre-todo/**/*.ts",
+        "apps/sombre-todo/**/*.css",
+        "apps/sombre-todo/**/*.html"
+      ],
+      "options": {
+        "tailwindStylesheet": "apps/sombre-todo/src/styles.css"
+      }
+    }
+  ]
 }

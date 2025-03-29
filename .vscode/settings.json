@@ -1,5 +1,17 @@
 {
   "tailwindCSS.experimental.classRegex": [
     ["tv\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
-  ]
+  ],
+  "tailwindCSS.experimental.configFile": {
+    "libs/sombre/src/styles/theme.css": [
+      "libs/sombre/**/*.ts",
+      "libs/sombre/**/*.css",
+      "libs/sombre/**/*.html"
+    ],
+    "apps/sombre-todo/src/styles.css": [
+      "apps/sombre-todo/**/*.ts",
+      "apps/sombre-todo/**/*.css",
+      "apps/sombre-todo/**/*.html"
+    ]
+  }
 }

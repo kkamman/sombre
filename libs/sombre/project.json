@@ -31,6 +31,19 @@
       },
       "defaultConfiguration": "production"
     },
+    "build-tailwind": {
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "configurations": {
+        "production": {
+          "command": "npx @tailwindcss/cli -i ./{projectRoot}/src/styles/theme.css -o ./dist/{projectRoot}/themes/theme.css -m"
+        },
+        "development": {
+          "command": "npx @tailwindcss/cli -i ./{projectRoot}/src/styles/theme.css -o ./dist/{projectRoot}/themes/theme.css"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
     "build-lib": {
       "executor": "nx:run-commands",
       "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
@@ -38,13 +51,13 @@
         "production": {
           "commands": [
             "npx nx run sombre:build-angular:production",
-            "npx @tailwindcss/cli -i ./{projectRoot}/src/styles/theme.css -o ./dist/{projectRoot}/themes/theme.css -m"
+            "npx nx run sombre:build-tailwind:production"
           ]
         },
         "development": {
           "commands": [
             "npx nx run sombre:build-angular:development",
-            "npx @tailwindcss/cli -i ./{projectRoot}/src/styles/theme.css -o ./dist/{projectRoot}/themes/theme.css"
+            "npx nx run sombre:build-tailwind:development"
           ]
         }
       },

@@ -7,6 +7,7 @@
   3. Reset all borders.
 */
 
+:where(.smbr\:preflight),
 :where(.smbr\:preflight) *,
 :where(.smbr\:preflight) ::after,
 :where(.smbr\:preflight) ::before,
@@ -304,7 +305,7 @@ input:where(.smbr\:preflight),
 select:where(.smbr\:preflight),
 optgroup:where(.smbr\:preflight),
 textarea:where(.smbr\:preflight),
-::file-selector-button:where(.smbr\:preflight) {
+:where(.smbr\:preflight)::file-selector-button {
   font: inherit; /* 1 */
   font-feature-settings: inherit; /* 1 */
   font-variation-settings: inherit; /* 1 */
@@ -338,7 +339,7 @@ textarea:where(.smbr\:preflight),
 */
 
 :where(.smbr\:preflight) ::file-selector-button,
-::file-selector-button:where(.smbr\:preflight) {
+:where(.smbr\:preflight)::file-selector-button {
   margin-inline-end: 4px;
 }
 
@@ -347,7 +348,7 @@ textarea:where(.smbr\:preflight),
 */
 
 :where(.smbr\:preflight) ::placeholder,
-::placeholder:where(.smbr\:preflight) {
+:where(.smbr\:preflight)::placeholder {
   opacity: 1;
 }
 
@@ -359,7 +360,7 @@ textarea:where(.smbr\:preflight),
 @supports (not (-webkit-appearance: -apple-pay-button)) /* Not Safari */ or
   (contain-intrinsic-size: 1px) /* Safari 17+ */ {
   :where(.smbr\:preflight) ::placeholder,
-  ::placeholder:where(.smbr\:preflight) {
+  :where(.smbr\:preflight)::placeholder {
     color: color-mix(in oklab, currentColor 50%, transparent);
   }
 }
@@ -451,7 +452,7 @@ textarea:where(.smbr\:preflight) {
 :where(.smbr\:preflight) ::file-selector-button,
 button:where(.smbr\:preflight),
 input:where([type='button'], [type='reset'], [type='submit']).smbr\:preflight,
-::file-selector-button:where(.smbr\:preflight) {
+:where(.smbr\:preflight)::file-selector-button {
   appearance: button;
 }
 
