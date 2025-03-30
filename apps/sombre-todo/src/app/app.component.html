@@ -1,46 +1,100 @@
-<div class="flex gap-4 p-4">
-  <button smbrButton>Default</button>
-  <button smbrButton [color]="'primary'">Primary</button>
-  <button smbrButton [color]="'secondary'">Secondary</button>
-  <button smbrButton [variant]="'outline'">Default</button>
-  <button smbrButton [color]="'primary'" [variant]="'outline'">Primary</button>
-  <button smbrButton [color]="'secondary'" [variant]="'outline'">
-    Secondary
-  </button>
-  <button smbrButton [variant]="'text'">Default</button>
-  <button smbrButton [color]="'primary'" [variant]="'text'">Primary</button>
-  <button smbrButton [color]="'secondary'" [variant]="'text'">Secondary</button>
-</div>
-<div class="flex gap-4 p-4">
-  <button smbrButton disabled>Default</button>
-  <button smbrButton [color]="'primary'" disabled>Primary</button>
-  <button smbrButton [color]="'secondary'" disabled>Secondary</button>
-  <button smbrButton [variant]="'outline'" disabled>Default</button>
-  <button smbrButton [color]="'primary'" [variant]="'outline'" disabled>
-    Primary
-  </button>
-  <button smbrButton [color]="'secondary'" [variant]="'outline'" disabled>
-    Secondary
-  </button>
-  <button smbrButton [variant]="'text'" disabled>Default</button>
-  <button smbrButton [color]="'primary'" [variant]="'text'" disabled>
-    Primary
-  </button>
-  <button smbrButton [color]="'secondary'" [variant]="'text'" disabled>
-    Secondary
-  </button>
-</div>
-<div class="flex gap-4 p-4">
-  <a smbrButton href="/">Default</a>
-  <a smbrButton [color]="'primary'" href="/">Primary</a>
-  <a smbrButton [color]="'secondary'" href="/">Secondary</a>
-  <a smbrButton [variant]="'outline'" href="/">Default</a>
-  <a smbrButton [color]="'primary'" [variant]="'outline'" href="/">Primary</a>
-  <a smbrButton [color]="'secondary'" [variant]="'outline'" href="/">
-    Secondary
-  </a>
-  <a smbrButton [variant]="'text'" href="/">Default</a>
-  <a smbrButton [color]="'primary'" [variant]="'text'" href="/">Primary</a>
-  <a smbrButton [color]="'secondary'" [variant]="'text'" href="/">Secondary</a>
+<div class="flex flex-col gap-4 p-4">
+  <div class="flex gap-4">
+    <button smbrButton>Default</button>
+    <button smbrButton [color]="'primary'">Primary</button>
+    <button smbrButton [color]="'secondary'">Secondary</button>
+    <button smbrButton [variant]="'outline'">Default</button>
+    <button smbrButton [color]="'primary'" [variant]="'outline'">
+      Primary
+    </button>
+    <button smbrButton [color]="'secondary'" [variant]="'outline'">
+      Secondary
+    </button>
+    <button smbrButton [variant]="'text'">Default</button>
+    <button smbrButton [color]="'primary'" [variant]="'text'">Primary</button>
+    <button smbrButton [color]="'secondary'" [variant]="'text'">
+      Secondary
+    </button>
+  </div>
+  @let progress = (progress$ | async) ?? 0;
+  <div class="flex gap-4">
+    <button smbrButton [progress]="progress">Default</button>
+    <button smbrButton [progress]="progress" [color]="'primary'">
+      Primary
+    </button>
+    <button smbrButton [progress]="progress" [color]="'secondary'">
+      Secondary
+    </button>
+    <button smbrButton [progress]="progress" [variant]="'outline'">
+      Default
+    </button>
+    <button
+      smbrButton
+      [progress]="progress"
+      [color]="'primary'"
+      [variant]="'outline'"
+    >
+      Primary
+    </button>
+    <button
+      smbrButton
+      [progress]="progress"
+      [color]="'secondary'"
+      [variant]="'outline'"
+    >
+      Secondary
+    </button>
+    <button smbrButton [progress]="progress" [variant]="'text'">Default</button>
+    <button
+      smbrButton
+      [progress]="progress"
+      [color]="'primary'"
+      [variant]="'text'"
+    >
+      Primary
+    </button>
+    <button
+      smbrButton
+      [progress]="progress"
+      [color]="'secondary'"
+      [variant]="'text'"
+    >
+      Secondary
+    </button>
+  </div>
+  <div class="flex gap-4">
+    <button smbrButton disabled>Default</button>
+    <button smbrButton [color]="'primary'" disabled>Primary</button>
+    <button smbrButton [color]="'secondary'" disabled>Secondary</button>
+    <button smbrButton [variant]="'outline'" disabled>Default</button>
+    <button smbrButton [color]="'primary'" [variant]="'outline'" disabled>
+      Primary
+    </button>
+    <button smbrButton [color]="'secondary'" [variant]="'outline'" disabled>
+      Secondary
+    </button>
+    <button smbrButton [variant]="'text'" disabled>Default</button>
+    <button smbrButton [color]="'primary'" [variant]="'text'" disabled>
+      Primary
+    </button>
+    <button smbrButton [color]="'secondary'" [variant]="'text'" disabled>
+      Secondary
+    </button>
+  </div>
+  <div class="flex gap-4">
+    <a smbrButton href="/">Default</a>
+    <a smbrButton [color]="'primary'" href="/">Primary</a>
+    <a smbrButton [color]="'secondary'" href="/">Secondary</a>
+    <a smbrButton [variant]="'outline'" href="/">Default</a>
+    <a smbrButton [color]="'primary'" [variant]="'outline'" href="/">Primary</a>
+    <a smbrButton [color]="'secondary'" [variant]="'outline'" href="/">
+      Secondary
+    </a>
+    <a smbrButton [variant]="'text'" href="/">Default</a>
+    <a smbrButton [color]="'primary'" [variant]="'text'" href="/">Primary</a>
+    <a smbrButton [color]="'secondary'" [variant]="'text'" href="/"
+      >Secondary</a
+    >
+  </div>
 </div>
 <router-outlet></router-outlet>
