@@ -11,6 +11,7 @@
     --color-primary-foreground: var(--smbr-color-teal-50);
     --color-secondary: var(--smbr-color-blue-500);
     --color-secondary-foreground: var(--smbr-color-blue-50);
+    --font-display: 'Nunito', sans-serif;
   }
 
   @variant dark {

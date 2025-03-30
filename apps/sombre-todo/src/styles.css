@@ -1,5 +1,6 @@
 @layer theme, base, sombre, components, utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import '../../../dist/libs/sombre/themes/theme.css';
 
 @import 'tailwindcss/theme.css' layer(theme);

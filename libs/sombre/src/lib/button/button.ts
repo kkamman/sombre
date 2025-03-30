@@ -7,12 +7,10 @@ import {
 import { ClassValue } from 'tailwind-variants';
 import { ButtonVariants, buttonVariants } from './variants';
 
-const { base: baseVariant, label: labelVariant } = buttonVariants();
-
 @Component({
-  selector: 'button[smbrButton]',
+  selector: 'button[smbrButton], a[smbrButton]',
   imports: [],
-  template: `<span [class]="labelClass()"><ng-content /></span>`,
+  template: `<ng-content />`,
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '[class]': 'baseClass()' },
 })
@@ -24,14 +22,10 @@ export class ButtonComponent {
   readonly userClass = input<ClassValue>('', { alias: 'class' });
 
   protected readonly baseClass = computed(() =>
-    baseVariant({
+    buttonVariants({
       color: this.color(),
       variant: this.variant(),
       class: this.userClass(),
     }),
-  );
-
-  protected readonly labelClass = computed(() =>
-    labelVariant({ color: this.color() }),
   );
 }
